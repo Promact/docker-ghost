@@ -5,9 +5,9 @@ mysql:
     - "MYSQL_USER: ghost"
     - "MYSQL_PASSWORD: ghostpwd"	
   image: "mysql:latest"
-web: 
+web:
   build: "./nodejs/mysql/"
-  links: 
-    - mysql    
-  ports: 
-    - "80:2368"  
+  links:
+    - mysql
+  ports:
+    - "80:2368"
