@@ -1,0 +1,13 @@
+mysql: 
+  environment: 
+    - "MYSQL_ROOT_PASSWORD: secretpassword"
+    - "MYSQL_DATABASE: ghost"
+    - "MYSQL_USER: ghost"
+    - "MYSQL_PASSWORD: ghostpwd"	
+  image: "mysql:latest"
+web: 
+  build: "./nodejs/mysql/"
+  links: 
+    - mysql    
+  ports: 
+    - "80:2368"  
