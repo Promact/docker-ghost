@@ -24,5 +24,5 @@ RUN { \
 	&& npm install mysql
 
 EXPOSE 2368
-
+ENV NODE_ENV production
 CMD ["npm", "start"]	
