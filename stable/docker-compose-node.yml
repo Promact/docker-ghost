@@ -11,3 +11,5 @@ web:
     - mysql
   ports:
     - "80:2368"
+  environment:
+    - NODE_ENV=production
