@@ -25,4 +25,5 @@ RUN { \
 
 EXPOSE 2368
 ENV NODE_ENV production
+RUN chown -R user:user /usr/src/ghost
 CMD ["npm", "start"]	
