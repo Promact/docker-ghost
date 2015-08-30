@@ -39,5 +39,5 @@ CMD ["/usr/sbin/sshd", "-D"]
 	
 EXPOSE 2368
 ENV NODE_ENV production
-RUN chown -R user:user /usr/src/ghost && cd /usr/src/ghost && ls -l && cat config.js
+RUN chown -R user:user /usr/src/ghost && cd /usr/src/ghost && ls -l && cat config.js && rm config.example.js
 CMD ["npm", "start", "/usr/sbin/sshd", "-D"]	
