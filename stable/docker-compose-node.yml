@@ -1,5 +1,5 @@
-mysql: 
-  environment: 
+mysql:
+  environment:
     - MYSQL_ROOT_PASSWORD=secretpassword
     - MYSQL_DATABASE=ghost
     - MYSQL_USER=ghost
@@ -9,7 +9,6 @@ web:
   build: "./nodejs/mysql/"
   links:
     - mysql
-  ports:
-    - "80:2368"    
+  ports: "80:2368"
   environment:
     - NODE_ENV=production
